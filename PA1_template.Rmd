@@ -189,8 +189,8 @@ steps.intervalNum.day <- aggregate(steps ~ intervalNum+weekday
 xyplot(steps~intervalNum|weekday
       ,data=steps.intervalNum.day
       ,type="l"
-      ,xlab="Interval"
-      ,ylab="Number of steps"
+      ,xlab="5-minute interval number"
+      ,ylab="number of steps"
       ,layout=c(1,2))
 
 ```
