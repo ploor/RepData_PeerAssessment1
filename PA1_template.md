@@ -70,7 +70,7 @@ ggplot(steps.date, aes(x=steps) ) +
   xlab("steps in a day")
 ```
 
-![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6.png) 
+![plot of chunk unnamed-chunk-6](figures/unnamed-chunk-6.png) 
 
 ### 2. Calculate and report the mean and median total number of steps taken per day
 
@@ -101,7 +101,7 @@ xyplot(steps~intervalNum
       )
 ```
 
-![plot of chunk unnamed-chunk-8](figure/unnamed-chunk-8.png) 
+![plot of chunk unnamed-chunk-8](figures/unnamed-chunk-8.png) 
 
 ### 2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -193,7 +193,7 @@ ggplot(imputed_steps.date, aes(x=steps) ) +
   xlab("steps in a day")
 ```
 
-![plot of chunk unnamed-chunk-15](figure/unnamed-chunk-15.png) 
+![plot of chunk unnamed-chunk-15](figures/unnamed-chunk-15.png) 
 
 ## Are there differences in activity patterns between weekdays and weekends?
 
@@ -225,4 +225,4 @@ xyplot(steps~intervalNum|weekday
       ,layout=c(1,2))
 ```
 
-![plot of chunk unnamed-chunk-17](figure/unnamed-chunk-17.png) 
+![plot of chunk unnamed-chunk-17](figures/unnamed-chunk-17.png) 

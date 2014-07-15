@@ -47,7 +47,7 @@ For this part of the assignment, we can ignore the missing values in the dataset
 
 ### 1. Make a histogram of the total number of steps taken each day
 
-```{r,fig.height=4}
+```{r,fig.height=4,fig.path="figures/"}
 data.noMiss <- data[!is.na(data$steps),]
 data.miss <- data[is.na(data$steps),] # handy later
 
@@ -74,7 +74,7 @@ The **mean** steps per day is `r mean.steps`.  The **median** steps per day is `
 
 ### 1. Make a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days (y-axis)
 
-```{r,fig.height=4}
+```{r,fig.height=4,fig.path="figures/"}
 steps.intervalNum <- aggregate(steps ~ intervalNum
                               ,data=data
                               ,FUN=mean)
@@ -160,7 +160,7 @@ Which shows that for any day containing missing values for steps, all the steps 
 The median has shifted higher, due to the mean being higher than the median.  And now it also happens to equal the mean.
 
 And now for the histogram:
-```{r,fig.height=4}
+```{r,fig.height=4,fig.path="figures/"}
 ggplot(imputed_steps.date, aes(x=steps) ) +
   geom_histogram(binwidth=500) +
   xlab("steps in a day")
@@ -182,7 +182,7 @@ data.imputed$weekday<-as.factor(data.imputed$weekday)
 
 ### 2. Make a panel plot containing a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis).
 
-```{r,fig.height=4}
+```{r,fig.height=4,fig.path="figures/"}
 steps.intervalNum.day <- aggregate(steps ~ intervalNum+weekday
                                   ,data=data.imputed
                                   ,FUN=mean)
